@@ -172,3 +172,222 @@ footer {
   flex-wrap: wrap;
 }
 
+/* ==== Auth Pages (Register & Login) ==== */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background: linear-gradient(135deg, #ffe6e6, #ffffff);
+  padding: 40px 0;
+}
+
+.auth-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px 50px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  border-top: 5px solid #d50000;
+}
+
+.auth-box h2 {
+  color: #d50000;
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.auth-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.auth-box input,
+.auth-box select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.auth-box input:focus,
+.auth-box select:focus {
+  border-color: #d50000;
+  box-shadow: 0 0 5px rgba(213, 0, 0, 0.3);
+}
+
+.auth-box button {
+  background: #d50000;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-box button:hover {
+  background: #b00000;
+}
+
+.auth-box p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.auth-box a {
+  color: #d50000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-box a:hover {
+  text-decoration: underline;
+}
+/* ==== Search Donors Page ==== */
+.search-section {
+  padding: 60px 10%;
+  text-align: center;
+  background: #fff5f5;
+}
+
+.search-section h2 {
+  color: #d50000;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.search-section p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.search-form select,
+.search-form input {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 220px;
+  font-size: 15px;
+  outline: none;
+}
+
+.search-form button {
+  background: #d50000;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-form button:hover {
+  background: #b00000;
+}
+
+.results {
+  margin-top: 30px;
+  text-align: left;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.results .placeholder {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+}
+
+/* ==== Contact Page ==== */
+.contact-section {
+  padding: 60px 10%;
+  background: #fff;
+  text-align: center;
+}
+
+.contact-section h2 {
+  color: #d50000;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  font-size: 15px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #d50000;
+  box-shadow: 0 0 4px rgba(213, 0, 0, 0.3);
+}
+
+.contact-form button {
+  background: #d50000;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #b00000;
+}
+
+.contact-info {
+  background: #fff5f5;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h4 {
+  color: #d50000;
+  margin-bottom: 5px;
+}
+
+.contact-info p {
+  color: #333;
+  margin-bottom: 15px;
+}

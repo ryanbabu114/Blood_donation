@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | LifeLink</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/heart-icon.png" alt="logo">
+      <h1>LifeLink</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="register.html">Register</a>
+      <a href="login.html">Login</a>
+      <a href="search.html">Find Donors</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Have questions or want to organize a donation camp? Reach out to us!</p>
+
+    <form class="contact-form" action="contact.php" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <h4>📍 Our Office</h4>
+      <p>St. Joseph’s College of Engineering, Pala</p>
+      <h4>📞 Phone</h4>
+      <p>+91 98765 43210</p>
+      <h4>📧 Email</h4>
+      <p>lifelink.support@gmail.com</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 LifeLink | Built with ❤️ to Save Lives</p>
+  </footer>
+
+</body>
+</html>

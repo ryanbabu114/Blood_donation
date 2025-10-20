@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | LifeLink</title>
+  <link rel="stylesheet" href="style.css">
+  <form action="backend/register.php" method="POST">
+
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/heart-icon.png" alt="logo">
+      <h1>LifeLink</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="register.html" class="active">Register</a>
+      <a href="login.html">Login</a>
+      <a href="search.html">Find Donors</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="auth-container">
+    <div class="auth-box">
+      <h2>Donor Registration</h2>
+      <form action="register.php" method="POST">
+        <input type="text" name="fullname" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="password" name="password" placeholder="Create Password" required>
+        <input type="text" name="phone" placeholder="Phone Number" required>
+        <select name="blood_group" required>
+          <option value="">Select Blood Group</option>
+          <option>A+</option>
+          <option>A-</option>
+          <option>B+</option>
+          <option>B-</option>
+          <option>AB+</option>
+          <option>AB-</option>
+          <option>O+</option>
+          <option>O-</option>
+        </select>
+        <input type="text" name="location" placeholder="Your City / Area" required>
+        <button type="submit">Register</button>
+      </form>
+      <p>Already registered? <a href="login.html">Login here</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 LifeLink | Built with ❤️ to Save Lives</p>
+  </footer>
+
+</body>
+</html>

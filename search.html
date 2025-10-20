@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Donors | LifeLink</title>
+  <link rel="stylesheet" href="style.css">
+  <form action="backend/search.php" method="POST">
+
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/heart-icon.png" alt="logo">
+      <h1>LifeLink</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="register.html">Register</a>
+      <a href="login.html">Login</a>
+      <a href="search.html" class="active">Find Donors</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="search-section">
+    <h2>Find Blood Donors</h2>
+    <p>Search donors by blood group and location.</p>
+
+    <form class="search-form" action="search.php" method="POST">
+      <select name="blood_group" required>
+        <option value="">Select Blood Group</option>
+        <option>A+</option>
+        <option>A-</option>
+        <option>B+</option>
+        <option>B-</option>
+        <option>AB+</option>
+        <option>AB-</option>
+        <option>O+</option>
+        <option>O-</option>
+      </select>
+
+      <input type="text" name="location" placeholder="Enter City / Area" required>
+
+      <button type="submit">Search</button>
+    </form>
+
+    <div class="results">
+      <!-- search results will appear here after PHP query -->
+      <p class="placeholder">Search results will appear here...</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 LifeLink | Built with ❤️ to Save Lives</p>
+  </footer>
+
+</body>
+</html>
