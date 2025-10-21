@@ -1,177 +1,303 @@
-/* ==== General Reset ==== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
+/* Global */
 body {
-  background-color: #fff;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
   color: #333;
+  scroll-behavior: smooth;
 }
 
-/* ==== Navbar ==== */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #d50000;
-  padding: 10px 50px;
+  background: #b30000;
   color: #fff;
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.logo {
+.navbar .logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.logo img {
+.navbar .logo img {
   width: 40px;
   height: 40px;
 }
 
-.logo h1 {
-  font-size: 24px;
-  font-weight: 600;
-}
-
 .navbar nav a {
-  text-decoration: none;
-  color: white;
-  margin-left: 20px;
+  margin-left: 25px;
   font-weight: 500;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 
 .navbar nav a:hover,
 .navbar nav a.active {
-  color: #ffd1d1;
-  border-bottom: 2px solid white;
+  color: #ffe0e0;
+  text-decoration: underline;
 }
 
-/* ==== Hero Section ==== */
+/* Hero */
 .hero {
-  background: url("../images/donate-bg.jpg") center/cover no-repeat;
-  height: 85vh;
+  position: relative;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
   text-align: center;
-  position: relative;
+  color: #fff;
 }
 
-.hero::before {
-  content: "";
+.hero .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .hero-text {
   position: relative;
   z-index: 1;
-  max-width: 700px;
 }
 
-.hero h2 {
-  font-size: 42px;
-  margin-bottom: 15px;
+.hero-text h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
-.hero p {
-  font-size: 18px;
-  margin-bottom: 25px;
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
 .btn {
-  background: #fff;
-  color: #d50000;
-  padding: 12px 30px;
-  border-radius: 5px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s;
+  background: #ff4d4d;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  transition: background 0.3s;
 }
 
 .btn:hover {
-  background: #ffd1d1;
+  background: #cc0000;
 }
 
-/* ==== Info Section ==== */
+/* Info Section */
 .info {
-  padding: 60px 10%;
   text-align: center;
-  background-color: #fafafa;
+  padding: 80px 40px;
+  background: #fff8f8;
 }
 
 .info h3 {
-  font-size: 30px;
-  color: #d50000;
-  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #b30000;
+  margin-bottom: 50px;
 }
 
 .cards {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
-  flex-wrap: wrap;
 }
 
 .card {
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  padding: 20px;
-  transition: 0.3s;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-5px);
 }
 
 .card img {
-  width: 60px;
-  height: 60px;
+  width: 70px;
   margin-bottom: 15px;
 }
 
 .card h4 {
-  color: #d50000;
+  color: #b30000;
   margin-bottom: 10px;
 }
 
-.card p {
-  color: #555;
-  font-size: 15px;
-}
-
-/* ==== Footer ==== */
+/* Footer */
 footer {
-  background: #d50000;
+  background: #b30000;
   color: white;
   text-align: center;
-  padding: 15px 0;
-  margin-top: 40px;
-  font-size: 14px;
-}
-.card img {
-  width: 70px;
-  height: 70px;
-  margin-bottom: 15px;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  padding: 20px;
+  margin-top: 50px;
 }
 
-.cards {
+
+/* ===== Forms ===== */
+.form-section {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
+  align-items: center;
+  min-height: 80vh;
+  background: #fff8f8;
+  padding: 40px;
 }
 
+.form-container {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.form-container h2 {
+  color: #b30000;
+  margin-bottom: 25px;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.form-box label {
+  font-weight: 500;
+  color: #333;
+}
+
+.form-box input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-box input:focus {
+  border-color: #b30000;
+}
+
+.form-footer {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.form-footer a {
+  color: #b30000;
+  font-weight: 600;
+}
+
+.alert {
+  background: #ffe6e6;
+  color: #b30000;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.spinner {
+  margin: 20px auto;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #b30000;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* ===== Dashboard ===== */
+.dashboard {
+  min-height: 80vh;
+  background: #fff8f8;
+  padding: 60px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-container {
+  text-align: center;
+  max-width: 900px;
+}
+
+.dashboard-container h2 {
+  color: #b30000;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.dashboard-container p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #444;
+}
+
+.dashboard-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.dash-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  color: #333;
+}
+
+.dash-card img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.dash-card h3 {
+  color: #b30000;
+  margin-bottom: 10px;
+}
+
+.dash-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.dash-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.logout-card {
+  background: #ffe6e6;
+}
+
+.btn-logout {
+  color: #fff;
+  background: #cc0000;
+  padding: 8px 15px;
+  border-radius: 8px;
 /* ==== Auth Pages (Register & Login) ==== */
 .auth-container {
   display: flex;
