@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeLink | Login</title>
+  <link rel="stylesheet" href="style.css">
+  <form action="backend/login.php" method="POST">
+
+  <style>
+    .login-container {
+      max-width: 400px;
+      margin: 80px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .login-container h2 {
+      text-align: center;
+      color: #d50000;
+      margin-bottom: 20px;
+    }
+    label { display: block; margin-top: 15px; font-weight: 500; color: #444; }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #d50000;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      font-weight: 600;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    button:hover { background: #b40000; }
+    .msg { text-align: center; margin-top: 10px; font-weight: 500; }
+  </style>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/heart-icon.png" alt="logo">
+      <h1>LifeLink</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="register.html">Register</a>
+      <a href="login.html" class="active">Login</a>
+      <a href="search.html">Find Donors</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label>Email</label>
+      <input type="email" id="email" required>
+      <label>Password</label>
+      <input type="password" id="password" required>
+      <button type="submit">Login</button>
+      <p class="msg" id="msg"></p>
+    </form>
+  </div>
+
+  <footer>
+    <p>© 2025 LifeLink | Built with ❤️ to Save Lives</p>
+  </footer>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      const user = JSON.parse(localStorage.getItem(email));
+
+      if (user && user.password === password) {
+        localStorage.setItem("loggedInUser", JSON.stringify(user));
+        document.getElementById("msg").innerText = "✅ Login successful!";
+        setTimeout(() => {
+          window.location.href = "search.html";
+        }, 2000);
+      } else {
+        document.getElementById("msg").innerText = "❌ Invalid email or password.";
+      }
+    });
+  </script>
+</body>
+</html>
