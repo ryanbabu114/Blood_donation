@@ -4,42 +4,138 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | LifeLink</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header class="navbar">
-    <div class="logo">
-      <img src="images/heart-icon.png" alt="logo">
-      <h1>LifeLink</h1>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="register.php">Register</a>
-      <a href="login.php">Login</a>
-      <a href="search.php">Find Donors</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-  </header>
+  <div class="content-wrapper">
+    <header class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/heart-icon.png" alt="logo">
+        <h1>LifeLink</h1>
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="register.php">Register</a>
+        <a href="login.php">Login</a>
+        <a href="search.php">Find Donors</a>
+        <a href="contact.html" class="active">Contact Us</a>
+      </nav>
+    </header>
 
-  <section class="form-section">
-    <div class="form-container">
-      <h2>Contact Us</h2>
-      <p style="font-size: 1.1rem; color: #555; margin-bottom: 25px;">
-        For support or inquiries, please reach out to us.
-      </p>
-      
-      <div class="contact-info" style="text-align: left; font-size: 1rem; line-height: 1.8;">
-        <p><strong>Email:</strong> lifelink@support.com</p>
-        <p><strong>Phone:</strong> +91-9876543210</p>
-        <p><strong>Address:</strong> 123 Life Saver Street, Bangalore, India</p>
+    <section class="page-header">
+      <h2>Get In Touch</h2>
+      <p>We're here to help and answer any question you might have.</p>
+    </section>
+
+    <section class="contact-section container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <p>For any support or inquiries, please reach out to us. We look forward to hearing from you!</p>
+          <div class="info-item">
+            <span class="icon-emoji">📧</span>
+            <div>
+              <strong>Email:</strong><br>
+              <a href="mailto:lifelink@support.com">lifelink@support.com</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="icon-emoji">📞</span>
+            <div>
+              <strong>Phone:</strong><br>
+              <a href="tel:+919876543210">+91-9876543210</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="icon-emoji">📍</span>
+            <div>
+              <strong>Address:</strong><br>
+              123 Choondacherry, Kerala, India
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h3>Frequently Asked Questions</h3>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How do I register as a donor?</div>
+          <div class="faq-answer">
+            <p>Click the "Register" button in the navigation bar. Fill out your details, including your blood group and city. Make sure to select "Donor" as your user type. That's it!</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Is my personal information safe?</div>
+          <div class="faq-answer">
+            <p>Yes. We take your privacy seriously. Your contact details are only shared with registered recipients who match your blood group and city criteria, ensuring a secure connection.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How often can I donate blood?</div>
+          <div class="faq-answer">
+            <p>In most regions, you can donate whole blood every 3 months (or 12 weeks). This allows your body ample time to replenish its blood supply.</p>
+          </div>
+        </div>
+      </div>
+      <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+          item.addEventListener('click', event => {
+            const answer = item.nextElementSibling;
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            item.classList.toggle('open');
+          })
+        });
+      </script>
+    </section>
+  </div><footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="logo">
+          <img src="images/heart-icon.png" alt="logo">
+          <h4>LifeLink</h4>
+        </a>
+        <p>A dedicated platform to connect blood donors and recipients, making it easier to save lives together.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="register.php">Register</a></li>
+          <li><a href="login.php">Login</a></li>
+          <li><a href="search.php">Find Donors</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>About</h4>
+        <ul>
+          <li><a href="contact.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Eligibility</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:lifelink@support.com">lifelink@support.com</a></li>
+          <li><a href="tel:+919876543210">+91-9876543210</a></li>
+          <li><a href="#">Kerala, India</a></li>
+        </ul>
       </div>
     </div>
-  </section>
-
-  <footer>
-    <p>© 2025 <strong>LifeLink</strong> | Built with ❤️ to Save Lives</p>
+    <div class="footer-bottom">
+      <p>© 2025 <strong>LifeLink</strong> | Built with ❤️ to Save Lives</p>
+    </div>
   </footer>
 </body>
 </html>

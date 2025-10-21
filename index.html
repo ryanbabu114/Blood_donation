@@ -4,66 +4,158 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LifeLink | Blood Donation System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <!-- Navigation Bar -->
-  <header class="navbar">
-    <div class="logo">
-      <img src="images/heart-icon.png" alt="logo">
-      <h1>LifeLink</h1>
-    </div>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="register.php">Register</a>
-      <a href="login.php">Login</a>
-      <a href="search.php">Find Donors</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <div class="content-wrapper">
+    <header class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/heart-icon.png" alt="logo">
+        <h1>LifeLink</h1>
+      </a>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="register.php">Register</a>
+        <a href="login.php">Login</a>
+        <a href="search.php">Find Donors</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="hero" style="background: url('images/hero-bg.jpg') center/cover no-repeat;">
-    <div class="overlay"></div>
-    <div class="hero-text">
-      <h2>Be a Hero. Save Lives.</h2>
-      <p>Every drop counts. Join our mission to make blood accessible for all.</p>
-      <a href="register.php" class="btn">Become a Donor</a>
-    </div>
-  </section>
+    <section class="hero" style="background: url('images/hero-bg.jpg') center/cover no-repeat;">
+      <div class="overlay"></div>
+      <div class="hero-text">
+        <h2>Be a Hero. Save Lives.</h2>
+        <p>Every drop counts. Join our mission to connect donors with those in need, instantly.</p>
+        <a href="register.php" class="btn">Become a Donor</a>
+      </div>
+    </section>
 
-  <!-- Information Cards -->
-  <section class="info">
-    <h3>Why Donate Blood?</h3>
-    <div class="cards">
-      <div class="card">
-        <img src="images/blood-drop.png" alt="drop">
-        <h4>Save Lives</h4>
-        <p>One donation can save up to three lives — your small act makes a big impact.</p>
+    <section class="info-section container">
+      <div class="section-header">
+        <h3>Why Donate Blood?</h3>
+        <p>Your donation is a lifeline. It's a simple act of kindness that has a profound impact on families and communities.</p>
       </div>
-      <div class="card">
-        <img src="images/health-check.png" alt="health">
-        <h4>Stay Healthy</h4>
-        <p>Regular donors experience balanced iron levels and improved cardiovascular health.</p>
+      <div class="cards">
+        <div class="card">
+          <span class="icon-emoji">🩸</span>
+          <h4>Save Lives</h4>
+          <p>One donation can save up to three lives — your small act makes a big impact.</p>
+        </div>
+        <div class="card">
+          <img src="images/health-check.png" alt="health">
+          <h4>Stay Healthy</h4>
+          <p>Regular donors may experience balanced iron levels and improved cardiovascular health.</p>
+        </div>
+        <div class="card">
+          <span class="icon-emoji">🤝</span>
+          <h4>Build Community</h4>
+          <p>Join thousands of kind hearts working together for a healthier humanity.</p>
+        </div>
+        <div class="card">
+          <span class="icon-emoji">❤️</span>
+          <h4>Give Back</h4>
+          <p>Help organize drives, assist hospitals, and spread awareness as a volunteer.</p>
+        </div>
       </div>
-      <div class="card">
-        <img src="images/community.png" alt="community">
-        <h4>Build Community</h4>
-        <p>Join thousands of kind hearts working together for humanity.</p>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <h3>How It Works</h3>
+          <p>A simple 3-step process to connect donors and recipients.</p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <span class="step-number">1</span>
+            <span class="icon-emoji">📝</span>
+            <h4>Register</h4>
+            <p>Create an account as a donor or a recipient with your details.</p>
+          </div>
+          <div class="card">
+            <span class="step-number">2</span>
+            <span class="icon-emoji">🔍</span>
+            <h4>Find or Be Found</h4>
+            <p>Recipients can search for donors by blood group and city.</p>
+          </div>
+          <div class="card">
+            <span class="step-number">3</span>
+            <span class="icon-emoji">📞</span>
+            <h4>Connect</h4>
+            <p>Securely connect with matches to coordinate and save a life.</p>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <img src="images/volunteer.png" alt="volunteer">
-        <h4>Be a Volunteer</h4>
-        <p>Help organize donation drives, assist hospitals, and spread awareness.</p>
+    </section>
+
+    <section class="dual-section container">
+      <div class="eligibility-list">
+        <h4>Donor Eligibility</h4>
+        <ul>
+          <li>You are between age 18 and 60.</li>
+          <li>You weigh at least 50 kg (110 lbs).</li>
+          <li>You are in good general health.</li>
+          <li>It has been at least 3 months since your last donation.</li>
+          <li>You are not currently sick or on antibiotics.</li>
+        </ul>
+        <a href="register.php" class="btn btn-secondary" style="margin-top: 20px;">Register Now</a>
+      </div>
+      <div class="testimonials">
+        <h4>From Our Community</h4>
+        <div class="testimonial-card">
+          <p>"LifeLink helped me find a donor for my father in an emergency. I am forever grateful for this platform and the kind donor."</p>
+          <div class="author">- Priya S.</div>
+        </div>
+        <div class="testimonial-card">
+          <p>"As a regular donor, LifeLink makes it easy for me to be available for those in need. The process is simple and secure."</p>
+          <div class="author">- Rohan M.</div>
+        </div>
+      </div>
+    </section>
+  </div><footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="logo">
+          <img src="images/heart-icon.png" alt="logo">
+          <h4>LifeLink</h4>
+        </a>
+        <p>A dedicated platform to connect blood donors and recipients, making it easier to save lives together.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="register.php">Register</a></li>
+          <li><a href="login.php">Login</a></li>
+          <li><a href="search.php">Find Donors</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>About</h4>
+        <ul>
+          <li><a href="contact.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Eligibility</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:lifelink@support.com">lifelink@support.com</a></li>
+          <li><a href="tel:+919876543210">+91-9876543210</a></li>
+          <li><a href="#">Kerala, India</a></li>
+        </ul>
       </div>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 <strong>LifeLink akri</strong> | Built with ❤️ to Save Lives</p>
+    <div class="footer-bottom">
+      <p>© 2025 <strong>LifeLink</strong> | Built with ❤️ to Save Lives</p>
+    </div>
   </footer>
 </body>
 </html>
