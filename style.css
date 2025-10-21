@@ -86,6 +86,11 @@ a {
   padding: 12px 25px;
   border-radius: 25px;
   transition: background 0.3s;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
 }
 
 .btn:hover {
@@ -139,7 +144,7 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
-  margin-top: 50px;
+  /* Removed margin-top to let sections fill height */
 }
 
 
@@ -151,6 +156,7 @@ footer {
   min-height: 80vh;
   background: #fff8f8;
   padding: 40px;
+  box-sizing: border-box; /* Ensures padding doesn't break layout */
 }
 
 .form-container {
@@ -161,10 +167,12 @@ footer {
   max-width: 400px;
   width: 100%;
   text-align: center;
+  box-sizing: border-box; /* Ensures padding doesn't break layout */
 }
 
 .form-container h2 {
   color: #b30000;
+  margin-top: 0;
   margin-bottom: 25px;
 }
 
@@ -178,24 +186,36 @@ footer {
 .form-box label {
   font-weight: 500;
   color: #333;
+  margin-bottom: -5px; /* Aligns label closer to its input */
 }
 
-.form-box input {
+.form-box input,
+.form-box select {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
   outline: none;
   font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
   transition: border-color 0.3s;
+  box-sizing: border-box; /* Ensures padding doesn't break layout */
+  width: 100%;
 }
 
-.form-box input:focus {
+.form-box input:focus,
+.form-box select:focus {
   border-color: #b30000;
+}
+
+.form-box .btn {
+  margin-top: 10px;
+  border-radius: 8px; /* Match inputs */
 }
 
 .form-footer {
   margin-top: 15px;
   font-size: 0.9rem;
+  text-align: center;
 }
 
 .form-footer a {
@@ -210,6 +230,7 @@ footer {
   border-radius: 8px;
   margin-bottom: 15px;
   font-weight: 500;
+  text-align: center;
 }
 
 .spinner {
@@ -226,6 +247,7 @@ footer {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
 /* ===== Dashboard ===== */
 .dashboard {
   min-height: 80vh;
@@ -234,6 +256,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .dashboard-container {
@@ -282,6 +305,7 @@ footer {
 .dash-card p {
   font-size: 0.95rem;
   color: #555;
+  margin-bottom: 0;
 }
 
 .dash-card:hover {
@@ -298,4 +322,64 @@ footer {
   background: #cc0000;
   padding: 8px 15px;
   border-radius: 8px;
+}
+
+/* ===== ADDED: Search Page Styles ===== */
+.search-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.search-form .input-group {
+    flex: 1;
+    min-width: 200px;
+    text-align: left;
+}
+
+.search-form .btn {
+    flex-basis: 150px;
+    margin-top: 0;
+}
+
+.results-container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.results-container h3 {
+    color: #b30000;
+}
+
+.search-results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.search-results-table th,
+.search-results-table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.search-results-table th {
+    background-color: #b30000;
+    color: white;
+    font-weight: 600;
+}
+
+.search-results-table tr:nth-child(even) {
+    background-color: #fff8f8;
+}
+
+.search-results-table tr:hover {
+    background-color: #ffe6e6;
 }

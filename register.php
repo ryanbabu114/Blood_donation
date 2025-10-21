@@ -37,40 +37,70 @@ if (isset($_POST['submit'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Register - Blood Donation</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register | LifeLink</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<h2>User Registration</h2>
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/heart-icon.png" alt="logo">
+      <h1>LifeLink</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="register.php" class="active">Register</a>
+      <a href="login.php">Login</a>
+      <a href="search.php">Find Donors</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<?php if($message != '') { echo "<p>$message</p>"; } ?>
+  <section class="form-section">
+    <div class="form-container">
+      <h2>Create Your Account</h2>
 
-<form action="register.php" method="POST">
-    <label>Name:</label><br>
-    <input type="text" name="name" required><br><br>
+      <?php if ($message != ''): ?>
+        <div class="alert"><?= $message ?></div>
+      <?php endif; ?>
 
-    <label>Email:</label><br>
-    <input type="email" name="email" required><br><br>
+      <form action="register.php" method="POST" class="form-box">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Enter your full name" required>
 
-    <label>Password:</label><br>
-    <input type="password" name="password" required><br><br>
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Enter your email" required>
 
-    <label>Blood Group:</label><br>
-    <input type="text" name="blood_group" required><br><br>
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Create a password" required>
 
-    <label>City:</label><br>
-    <input type="text" name="city" required><br><br>
+        <label>Blood Group (e.g., A+, O-)</label>
+        <input type="text" name="blood_group" placeholder="Enter blood group" required>
 
-    <label>Phone:</label><br>
-    <input type="text" name="phone" required><br><br>
+        <label>City</label>
+        <input type="text" name="city" placeholder="Enter your city" required>
 
-    <label>User Type:</label><br>
-    <select name="user_type" required>
-        <option value="donor">Donor</option>
-        <option value="recipient">Recipient</option>
-    </select><br><br>
+        <label>Phone</label>
+        <input type="text" name="phone" placeholder="Enter your phone number" required>
 
-    <input type="submit" name="submit" value="Register">
-</form>
+        <label>I am a...</label>
+        <select name="user_type" required>
+            <option value="donor">Donor</option>
+            <option value="recipient">Recipient</option>
+        </select>
+
+        <button type="submit" name="submit" class="btn">Register</button>
+
+        <p class="form-footer">Already have an account? <a href="login.php">Login here</a>.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 <strong>LifeLink</strong> | Built with ❤️ to Save Lives</p>
+  </footer>
 </body>
 </html>
