@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LifeLink | Blood Donation System</title>
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
+  <!-- Navigation Bar -->
   <header class="navbar">
     <div class="logo">
       <img src="images/heart-icon.png" alt="logo">
@@ -14,51 +17,53 @@
     </div>
     <nav>
       <a href="index.html" class="active">Home</a>
-      <a href="register.html">Register</a>
-      <a href="login.html">Login</a>
-      <a href="search.html">Find Donors</a>
+      <a href="register.php">Register</a>
+      <a href="login.php">Login</a>
+      <a href="search.php">Find Donors</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
- <section class="hero" style="background: url('images/hero-bg.jpg') center/cover no-repeat;">
-  <div class="hero-text">
-    <h2>Be a Hero. Save Lives.</h2>
-    <p>Every drop counts. Join our mission to make blood accessible for all.</p>
-    <a href="register.html" class="btn">Become a Donor</a>
-  </div>
-</section>
-
-
- <section class="info">
-  <h3>Why Donate Blood?</h3>
-  <div class="cards">
-    <div class="card">
-      <img src="images/blood-drop.png" alt="drop">
-      <h4>Save Lives</h4>
-      <p>One donation can save up to three lives — your small act makes a big impact.</p>
+  <!-- Hero Section -->
+  <section class="hero" style="background: url('images/hero-bg.jpg') center/cover no-repeat;">
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h2>Be a Hero. Save Lives.</h2>
+      <p>Every drop counts. Join our mission to make blood accessible for all.</p>
+      <a href="register.php" class="btn">Become a Donor</a>
     </div>
-    <div class="card">
-      <img src="images/health-check.png" alt="health">
-      <h4>Stay Healthy</h4>
-      <p>Regular donors experience balanced iron levels and improved cardiovascular health.</p>
-    </div>
-    <div class="card">
-      <img src="images/community.png" alt="community">
-      <h4>Build Community</h4>
-      <p>Join thousands of kind hearts working together for humanity.</p>
-    </div>
-    <div class="card">
-      <img src="images/volunteer.png" alt="volunteer">
-      <h4>Be a Volunteer</h4>
-      <p>Help organize donation drives, assist hospitals, and spread awareness.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Information Cards -->
+  <section class="info">
+    <h3>Why Donate Blood?</h3>
+    <div class="cards">
+      <div class="card">
+        <img src="images/blood-drop.png" alt="drop">
+        <h4>Save Lives</h4>
+        <p>One donation can save up to three lives — your small act makes a big impact.</p>
+      </div>
+      <div class="card">
+        <img src="images/health-check.png" alt="health">
+        <h4>Stay Healthy</h4>
+        <p>Regular donors experience balanced iron levels and improved cardiovascular health.</p>
+      </div>
+      <div class="card">
+        <img src="images/community.png" alt="community">
+        <h4>Build Community</h4>
+        <p>Join thousands of kind hearts working together for humanity.</p>
+      </div>
+      <div class="card">
+        <img src="images/volunteer.png" alt="volunteer">
+        <h4>Be a Volunteer</h4>
+        <p>Help organize donation drives, assist hospitals, and spread awareness.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 LifeLink | Built with ❤️ to Save Lives</p>
+    <p>© 2025 <strong>LifeLink</strong> | Built with ❤️ to Save Lives</p>
   </footer>
 </body>
 </html>
